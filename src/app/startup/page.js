@@ -44,7 +44,7 @@ const BookingForm = () => {
     const currency = "INR";
 
     const response = await axios.post("https://ecell-orcin.vercel.app/payment/", {
-      amount: 1800 * 100,
+      amount: 575 * 100,
       receipt: "AAyu9414",
       currency,
     });
@@ -163,17 +163,17 @@ const BookingForm = () => {
       </div>
       <div className="min-h-screen bg-black text-white/80 flex font-DarkerBold flex-col items-start py-10 px-4 sm:px-8 lg:px-16">
         <h1 className="text-3xl font-bold mb-6 font-DarkerBold">
-          Terms and Conditions for Accommodation
+          Terms and Conditions for Registeration in google startup weekend
         </h1>
 
         <p className="mb-4">
-          Welcome to the E-Summit DTU 2025 accommodation services. By proceeding with
+          Welcome to the Startup Weeekend DTU 2025 registeration services. By proceeding with
           the booking, you agree to the following terms and conditions:
         </p>
 
         <p className="font-semibold">1. Payment Policy</p>
         <p className="mb-4">
-          All payments made for accommodation during E-Summit DTU 2025 are strictly
+          All payments made for registeration during google startup weekend DTU 2025 are strictly
           non-refundable. No requests for refunds will be entertained under any
           circumstances, including but not limited to cancellations, changes in
           schedule, or personal reasons.
