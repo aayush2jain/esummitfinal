@@ -111,7 +111,6 @@ const BookingForm = () => {
               { label: "College", id: "college", type: "text" },
               { label: "City", id: "city", type: "text" },
               { label: "Contact", id: "contact", type: "text" },
-              { label: "Team Name", id: "team", type: "text" },
               { label: "Email", id: "email", type: "email" },
               { label: "Confirm Email", id: "confirmEmail", type: "email" },
             ].map(({ label, id, type }) => (
