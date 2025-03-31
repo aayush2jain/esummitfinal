@@ -30,7 +30,7 @@ const BookingForm = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:4000/startup/", formData);
+      const response = await axios.post("https://ecell-orcin.vercel.app/startup/", formData);
       console.log("Task created:", response.data);
       alert("Your registeration is sucessfull");
     } catch (error) {
@@ -43,7 +43,7 @@ const BookingForm = () => {
     e.preventDefault();
     const currency = "INR";
 
-    const response = await axios.post("http://localhost:4000/payment/", {
+    const response = await axios.post("https://ecell-orcin.vercel.app/payment/", {
       amount: 1800 * 100,
       receipt: "AAyu9414",
       currency,
@@ -52,7 +52,7 @@ const BookingForm = () => {
     const { id: orderId, amount } = response.data;
 
     const options = {
-      key: "rzp_live_Kz0ka8aJYIo4Fc",
+      key: "rzp_test_BmNDHv9Xp3EkE6",
       amount,
       currency,
       name: "E-Cell DTU",
@@ -102,9 +102,9 @@ const BookingForm = () => {
       <div className="max-w-3xl mx-auto p-6 shadow-lg text-white">
         <HyperText
           className="text-2xl text-white md:text-5xl mt-24 md:my-12 font-bold font-Nova uppercase"
-          text="Accommodation"
+          text="Registeration Form"
         />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={paymentHandler}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               { label: "Name", id: "name", type: "text" },
