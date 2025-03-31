@@ -52,7 +52,7 @@ const BookingForm = () => {
     const { id: orderId, amount } = response.data;
 
     const options = {
-      key: "rzp_test_BmNDHv9Xp3EkE6",
+      key: "rzp_live_Kz0ka8aJYIo4Fc",
       amount,
       currency,
       name: "E-Cell DTU",
