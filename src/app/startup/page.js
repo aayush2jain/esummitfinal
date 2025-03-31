@@ -12,8 +12,8 @@ const BookingForm = () => {
     gender: "",
     contact: "",
     email: "",
-    confirmEmail: "",
     team:"",
+    confirmEmail: "",
   });
 
   const handleChange = (e) => {
@@ -30,9 +30,9 @@ const BookingForm = () => {
       return;
     }
     try {
-      const response = await axios.post("https://ecell-orcin.vercel.app/visitor/", formData);
+      const response = await axios.post("http://localhost:4000/startup/", formData);
       console.log("Task created:", response.data);
-      alert("Your accommodation is booked");
+      alert("Your registeration is sucessfull");
     } catch (error) {
       console.error("Error creating task:", error);
       alert("Something went wrong");
@@ -43,8 +43,8 @@ const BookingForm = () => {
     e.preventDefault();
     const currency = "INR";
 
-    const response = await axios.post("https://ecell-orcin.vercel.app/payment/", {
-      amount: 10 * 100,
+    const response = await axios.post("http://localhost:4000/payment/", {
+      amount: 1800 * 100,
       receipt: "AAyu9414",
       currency,
     });
@@ -104,14 +104,14 @@ const BookingForm = () => {
           className="text-2xl text-white md:text-5xl mt-24 md:my-12 font-bold font-Nova uppercase"
           text="Accommodation"
         />
-        <form onSubmit={paymentHandler}>
+        <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               { label: "Name", id: "name", type: "text" },
               { label: "College", id: "college", type: "text" },
               { label: "City", id: "city", type: "text" },
               { label: "Contact", id: "contact", type: "text" },
-              { label: "Team", id: "team", type: "text" },
+              { label: "Team Name", id: "team", type: "text" },
               { label: "Email", id: "email", type: "email" },
               { label: "Confirm Email", id: "confirmEmail", type: "email" },
             ].map(({ label, id, type }) => (
