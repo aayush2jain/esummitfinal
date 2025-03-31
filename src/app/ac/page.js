@@ -104,7 +104,7 @@ const BookingForm = () => {
           className="text-2xl text-white md:text-5xl mt-24 md:my-12 font-bold font-Nova uppercase"
           text="Accommodation"
         />
-        <form onSubmit={paymentHandler}>
+        <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               { label: "Name", id: "name", type: "text" },
